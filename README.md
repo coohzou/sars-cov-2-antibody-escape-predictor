@@ -17,6 +17,15 @@ python -m venv .venv
 
 Open http://127.0.0.1:5000 and upload a `.fasta` file.
 
+## Live demo (Render)
+
+Production deployment uses [Render Starter](https://render.com) for always-on hosting.
+After connecting the GitHub repo in the Render dashboard, the service URL is typically:
+
+`https://sars-cov-2-antibody-escape-predictor.onrender.com`
+
+Step-by-step setup: [`docs/DEPLOY_RENDER.md`](docs/DEPLOY_RENDER.md).
+
 Pre-trained Ridge models are included under `data/training/models/`. If `/ready` reports
 `predictor_ready=false`, run:
 

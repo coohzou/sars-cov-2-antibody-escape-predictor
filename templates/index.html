@@ -3,343 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SARS-CoV-2 variant identification and Casirivimab/Imdevimab neutralization prediction from genome FASTA uploads.">
     <title>SARS-CoV-2 Antibody Escape Predictor</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container { max-width: 900px; margin: 0 auto; }
-        .header { text-align: center; color: white; margin-bottom: 30px; }
-        .header h1 { font-size: 2em; margin-bottom: 10px; }
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-        .upload-area {
-            border: 3px dashed #667eea;
-            border-radius: 15px;
-            padding: 40px;
-            text-align: center;
-            background: #f8f9ff;
-            cursor: pointer;
-        }
-        .upload-area:hover { background: #eef2ff; }
-        .upload-icon { font-size: 48px; color: #667eea; }
-        .btn {
-            background: #667eea;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 10px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-        }
-        .btn:hover { background: #5a67d8; }
-        .result-card {
-            margin-top: 30px;
-            padding: 25px;
-            background: white;
-            border-radius: 15px;
-            border-left: 5px solid #667eea;
-            display: none;
-        }
-        .result-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .result-item {
-            background: #f7fafc;
-            padding: 12px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        .result-label { color: #718096; font-size: 0.85em; }
-        .result-value { font-size: 1.2em; font-weight: 600; }
-        .mutation-detected { color: #e53e3e; }
-        .mutation-not-detected { color: #38a169; }
-        .info-box {
-            background: #ebf4ff;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-        }
-        .antibody-box {
-            background: #fef5e7;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 15px;
-            border-left: 4px solid #e53e3e;
-        }
-        .loading { text-align: center; padding: 40px; display: none; }
-        .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #667eea;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-        .error-message {
-            background: #fed7d7;
-            color: #c53030;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
-            display: none;
-        }
-        .footer {
-            text-align: center;
-            color: white;
-            margin-top: 30px;
-            font-size: 0.85em;
-        }
-        .risk-high { color: #e53e3e; font-weight: bold; }
-        .risk-moderate { color: #d69e2e; font-weight: bold; }
-        .risk-low { color: #38a169; font-weight: bold; }
-        .risk-potentially-effective { color: #38a169; font-weight: bold; }
-        .antibody-list { margin-top: 10px; padding-left: 20px; }
-        .antibody-list li { margin-bottom: 5px; }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+    <div class="page">
+        <header class="site-header">
             <h1>SARS-CoV-2 Antibody Escape Predictor</h1>
-            <p>Upload sequence to predict IC50 and antibody escape risk</p>
-            <p style="font-size: 0.85em; margin-top: 8px; opacity: 0.9;">
-                Research and teaching tool only. Not for clinical decision-making.
+            <p class="lead">
+                Variant classification, spike mutation screening, and Casirivimab/Imdevimab IC<sub>50</sub> estimation from a genome FASTA file.
             </p>
-        </div>
+            <p class="disclaimer">
+                Research and teaching use only. Outputs are computational estimates and must not be used for clinical decisions.
+            </p>
+        </header>
 
-        <div class="card">
-            <div class="upload-area" id="dropArea">
-                    <div class="upload-icon">📤</div>
-                    <div class="upload-text">Drag & drop your FASTA file here</div>
-                    <div class="upload-hint">or click to browse</div>
-                    <input type="file" id="fileInput" accept=".fasta,.fa,.txt,.seq" style="display: none;">
+        <main>
+            <section class="panel" aria-labelledby="upload-heading">
+                <h2 id="upload-heading">Input</h2>
+                <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Upload FASTA file">
+                    <div class="dropzone-title">Upload a SARS-CoV-2 genome FASTA</div>
+                    <div class="dropzone-hint">Accepted: .fasta, .fa, .txt, .seq &mdash; drag and drop or click to browse</div>
+                    <input type="file" id="fileInput" accept=".fasta,.fa,.txt,.seq" hidden>
                 </div>
-                <div class="file-info" id="fileInfo" style="margin-top: 15px; display: none;">
-                    <strong>Selected:</strong> <span id="fileName"></span>
+                <p class="file-selected" id="fileSelected" hidden>
+                    Selected file: <strong id="fileName"></strong>
+                </p>
+                <button type="button" class="btn-primary" id="analyzeBtn">Run analysis</button>
+                <div class="status loading" id="loadingStatus" hidden>Processing sequence&hellip;</div>
+                <div class="status error" id="errorStatus" hidden role="alert"></div>
+            </section>
+
+            <section class="panel" id="results" aria-labelledby="results-heading">
+                <h2 id="results-heading">Results</h2>
+                <div class="validation-note" id="validationNote"></div>
+                <div class="warning-note" id="analysisWarning" hidden></div>
+
+                <div class="metrics">
+                    <div class="metric">
+                        <span class="metric-label">Sequence length</span>
+                        <span class="metric-value" id="seqLength">&mdash;</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">GC content</span>
+                        <span class="metric-value" id="gcContent">&mdash;</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Cocktail IC<sub>50</sub> (min)</span>
+                        <span class="metric-value" id="ic50Value">&mdash;</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Summary risk</span>
+                        <span class="metric-value" id="escapeRisk">&mdash;</span>
+                    </div>
                 </div>
-                <button class="btn" onclick="analyzeFile()" style="margin-top: 20px;">Predict Antibody Escape</button>
 
-            <div class="loading" id="loading">
-                <div class="spinner"></div>
-                <p style="margin-top: 10px;">Analyzing sequence...</p>
-            </div>
+                <dl class="detail-block">
+                    <dt>Variant assignment</dt>
+                    <dd id="variantName">&mdash;</dd>
+                </dl>
 
-            <div class="error-message" id="error"></div>
+                <dl class="detail-block">
+                    <dt>Monitored spike mutations</dt>
+                    <dd id="mutationList">&mdash;</dd>
+                </dl>
 
-            <div class="result-card" id="result">
-    <h3 style="margin-bottom: 20px;">Antibody Escape Prediction</h3>
+                <div class="detail-block">
+                    <dt style="margin-bottom: 0.5rem;">Antibody-specific predictions</dt>
+                    <table class="antibody-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Antibody</th>
+                                <th scope="col">Predicted IC<sub>50</sub> (&mu;g/mL)</th>
+                                <th scope="col">Fold change</th>
+                                <th scope="col">Risk</th>
+                            </tr>
+                        </thead>
+                        <tbody id="antibodyRows"></tbody>
+                    </table>
+                </div>
 
-    <div id="validationBadge"></div>
-    <div id="analysisWarning" style="display: none; background: #fffaf0; padding: 10px; border-radius: 5px; margin-bottom: 15px; border-left: 4px solid #d69e2e;"></div>
+                <p class="footnote">
+                    Mutation detection is limited to predefined spike sites relative to Wuhan-Hu-1 (NC_045512.2); this is not a whole-proteome scan.
+                </p>
+            </section>
+        </main>
 
-    <div class="result-grid">
-        <div class="result-item">
-            <div class="result-label">Sequence Length</div>
-            <div class="result-value" id="seqLength">-</div>
-        </div>
-        <div class="result-item">
-            <div class="result-label">GC Content</div>
-            <div class="result-value" id="gcContent">-</div>
-        </div>
-        <div class="result-item">
-            <div class="result-label">Cocktail IC50 (min)</div>
-            <div class="result-value" id="ic50Value">-</div>
-        </div>
-        <div class="result-item">
-            <div class="result-label">Escape Risk</div>
-            <div class="result-value" id="escapeRisk">-</div>
-        </div>
+        <footer class="site-footer">
+            <p>
+                Reference genome: Wuhan-Hu-1 (NC_045512.2) &middot;
+                Training data: CoV-UniBind &middot;
+                Models: Ridge regression on spike mutation features
+            </p>
+            <p>
+                <a href="https://github.com/coohzou/sars-cov-2-antibody-escape-predictor" rel="noopener noreferrer">Source code</a>
+                &middot;
+                <a href="https://github.com/coohzou/sars-cov-2-antibody-escape-predictor/blob/main/REPRODUCIBILITY.md" rel="noopener noreferrer">Reproducibility</a>
+            </p>
+        </footer>
     </div>
-
-    <div class="info-box">
-        <strong>Detected Mutations:</strong><br>
-        <span id="mutationList">-</span>
-    </div>
-
-    <div class="info-box">
-        <strong>Identified Variant:</strong><br>
-        <span id="variantName">-</span>
-    </div>
-
-    <div class="antibody-box">
-        <strong>Affected Therapeutic Antibodies:</strong><br>
-        <div id="antibodyDetails">-</div>
-    </div>
-
-    <div style="margin-top: 15px; font-size: 0.8em; color: #718096; text-align: center;">
-        Detects predefined spike mutations only (not a full-protein scan).
-    </div>
-</div>
-        </div>
-
-        <div class="footer">
-            <p>Based on CoV-UniBind dataset | Reference: Wuhan-Hu-1 (NC_045512)</p>
-        </div>
-    </div>
-
-    <script>
-        const dropArea = document.getElementById('dropArea');
-        const fileInput = document.getElementById('fileInput');
-        dropArea.addEventListener('click', () => fileInput.click());
-        dropArea.addEventListener('dragover', (e) => { e.preventDefault(); dropArea.style.background = '#e0e7ff'; });
-        dropArea.addEventListener('dragleave', () => { dropArea.style.background = '#f8f9ff'; });
-        dropArea.addEventListener('drop', (e) => {
-            e.preventDefault();
-            dropArea.style.background = '#f8f9ff';
-            if (e.dataTransfer.files.length) {
-                fileInput.files = e.dataTransfer.files;
-                updateFileInfo();
-            }
-        });
-        fileInput.addEventListener('change', updateFileInfo);
-
-        function updateFileInfo() {
-            const info = document.getElementById('fileInfo');
-            if (fileInput.files.length) {
-                document.getElementById('fileName').textContent = fileInput.files[0].name;
-                info.style.display = 'block';
-            } else {
-                info.style.display = 'none';
-            }
-        }
-
-        function analyzeFile() {
-            if (!fileInput.files.length) { showError('Please select a file'); return; }
-            const formData = new FormData();
-            formData.append('file', fileInput.files[0]);
-            sendAnalysis('/upload', formData);
-        }
-
-        function sendAnalysis(url, data) {
-            document.getElementById('loading').style.display = 'block';
-            document.getElementById('result').style.display = 'none';
-            document.getElementById('error').style.display = 'none';
-            document.querySelectorAll('.btn').forEach(btn => btn.disabled = true);
-
-            const options = {
-                method: 'POST',
-                body: data instanceof FormData ? data : JSON.stringify(data),
-                headers: {}
-            };
-            if (!(data instanceof FormData)) options.headers['Content-Type'] = 'application/json';
-
-            fetch(url, options)
-                .then(async res => {
-                    const data = await res.json().catch(() => ({}));
-                    document.getElementById('loading').style.display = 'none';
-                    document.querySelectorAll('.btn').forEach(btn => btn.disabled = false);
-                    if (!res.ok) {
-                        showError(data.error || `Request failed (${res.status})`);
-                        return;
-                    }
-                    if (data.error) showError(data.error);
-                    else displayResults(data);
-                })
-                .catch(err => {
-                    document.getElementById('loading').style.display = 'none';
-                    document.querySelectorAll('.btn').forEach(btn => btn.disabled = false);
-                    showError('Network error: ' + err.message);
-                });
-        }
-
-        function riskClass(level) {
-            const normalized = (level || '').toLowerCase().replace(/\s+/g, '-');
-            if (normalized === 'high') return 'risk-high';
-            if (normalized === 'moderate') return 'risk-moderate';
-            if (normalized === 'low' || normalized === 'potentially-effective') return 'risk-low';
-            return 'risk-moderate';
-        }
-
-        function displayResults(data) {
-    const similarity = data.similarity_score || 0;
-
-    if (similarity < 70) {
-        const errorDiv = document.getElementById('error');
-        errorDiv.innerHTML = `
-            <strong>Not SARS-CoV-2 Sequence</strong><br>
-            Similarity: ${similarity}% (Threshold: 70%)
-        `;
-        errorDiv.style.display = 'block';
-        document.getElementById('result').style.display = 'none';
-        return;
-    }
-
-    const validationDiv = document.getElementById('validationBadge');
-    if (validationDiv) {
-        validationDiv.innerHTML = `
-            <div style="background: #e6fffa; padding: 10px; border-radius: 5px; margin-bottom: 15px; border-left: 5px solid #38b2ac;">
-                <strong>SARS-CoV-2 Confirmed</strong> (${similarity}% similarity)
-            </div>
-        `;
-    }
-
-    document.getElementById('seqLength').textContent = (data.sequence_info?.length || 0).toLocaleString() + ' bp';
-    document.getElementById('gcContent').textContent = (data.sequence_info?.gc_content || 0) + '%';
-
-    document.getElementById('variantName').innerHTML = data.variant?.name ?
-        `${data.variant.name} (${data.variant.confidence || 'N/A'})` : 'Unknown variant';
-
-    const mutationList = document.getElementById('mutationList');
-    mutationList.innerHTML = data.mutations?.list?.length ?
-        data.mutations.list.map(m => `${m}`).join(', ') : 'No mutations detected';
-
-    if (data.neutralization_results) {
-        const results = data.neutralization_results;
-
-        document.getElementById('ic50Value').textContent = results.cocktail_prediction + ' ug/ml';
-
-        const riskEl = document.getElementById('escapeRisk');
-        riskEl.textContent = results.summary_risk;
-        riskEl.className = `result-value ${riskClass(results.summary_risk)}`;
-
-        let html = '<ul class="antibody-list" style="list-style: none; padding: 0;">';
-
-        Object.entries(results.individual_analysis || {}).forEach(([name, info]) => {
-            const cls = riskClass(info.risk_level);
-            html += `
-                <li class="${cls}" style="margin-bottom: 8px; padding: 8px; border-radius: 4px; border-left: 4px solid;">
-                    <strong>${name}</strong>
-                    <span style="float: right;">Fold: ${info.fold_change ?? 'N/A'}x</span><br>
-                    <small>Predicted IC50: ${info.predicted_ic50_ug_ml} ug/ml | Risk: ${info.risk_level}</small>
-                </li>`;
-        });
-
-        html += '</ul>';
-        document.getElementById('antibodyDetails').innerHTML = html;
-    }
-
-    document.getElementById('result').style.display = 'block';
-
-    const warningEl = document.getElementById('analysisWarning');
-    if (data.warning) {
-        warningEl.textContent = data.warning;
-        warningEl.style.display = 'block';
-    } else {
-        warningEl.textContent = '';
-        warningEl.style.display = 'none';
-    }
-}
-
-        function showError(msg) {
-            const errDiv = document.getElementById('error');
-            errDiv.textContent = msg;
-            errDiv.style.display = 'block';
-        }
-    </script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 </html>
