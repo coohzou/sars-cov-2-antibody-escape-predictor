@@ -1,0 +1,49 @@
+{
+  "description": "Train/test split for unbiased evaluation. ML test iso_names are held out of model training.",
+  "ml_test_iso_names": [
+    "BA.1 Spike",
+    "BQ.1.1 Spike",
+    "B.1.351 Spike",
+    "BA.2.75.2 Spike",
+    "CH.1.1 Spike",
+    "XBB.1.5 Spike",
+    "BA.2 Spike",
+    "BA.4/5 Spike",
+    "B.1.617.2 Spike",
+    "B.1.1.7 Spike",
+    "P.1 Spike",
+    "BF.7 Spike",
+    "BJ.1 Spike",
+    "XBB.1 Spike",
+    "BA.2.12.1 Spike",
+    "BA.4.6 Spike",
+    "B.1.640.2 Spike",
+    "C.1.2 Spike:-144del-243del-244del-859N",
+    "BA.2.75 Spike",
+    "XBB.1.16 Spike"
+  ],
+  "pipeline_test_variants": [
+    "Alpha",
+    "Beta",
+    "Gamma",
+    "Delta",
+    "Omicron",
+    "BA.4",
+    "JN.1"
+  ],
+  "notes": {
+    "ml_train_source": "data/training/processed_ml_features.csv (CoV-DRDB expanded, ~560 rows)",
+    "ml_test_purpose": "20 held-out spike isoforms spanning Alpha/Delta/Omicron/XBB lineages",
+    "pipeline_test_purpose": "Variant identification and mutation detection on held-out NCBI strains (major categories Alpha–Omicron)",
+    "pipeline_train_overlap_variants": [
+      "Wild Type",
+      "Beta",
+      "BA.1",
+      "BA.2",
+      "BA.5",
+      "BA.2.75.2",
+      "BQ.1.1",
+      "XBB.1.5"
+    ]
+  }
+}

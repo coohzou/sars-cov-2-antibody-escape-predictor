@@ -1,0 +1,307 @@
+{
+  "description": "Held-out ML test evaluation (iso_names excluded from training)",
+  "test_file": "data\\training\\ml_test.csv",
+  "model_dir": "data\\training\\models",
+  "per_antibody": {
+    "Casirivimab": {
+      "n": 20,
+      "mae": 0.5941,
+      "rmse": 0.8296,
+      "r": 0.7547
+    },
+    "Imdevimab": {
+      "n": 20,
+      "mae": 0.4049,
+      "rmse": 0.4955,
+      "r": 0.9451
+    }
+  },
+  "overall": {
+    "n": 40,
+    "mae": 0.4995,
+    "rmse": 0.6833,
+    "r": 0.874
+  },
+  "predictions": [
+    {
+      "iso_name": "BA.1 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 3.0783,
+      "predicted_log10_fold": 3.0247,
+      "error": -0.0536
+    },
+    {
+      "iso_name": "BA.2 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 3.0783,
+      "predicted_log10_fold": 2.773,
+      "error": -0.3053
+    },
+    {
+      "iso_name": "C.1.2 Spike:-144del-243del-244del-859N",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 0.9332,
+      "predicted_log10_fold": 1.2051,
+      "error": 0.2719
+    },
+    {
+      "iso_name": "B.1.351 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 1.6318,
+      "predicted_log10_fold": 2.2196,
+      "error": 0.5878
+    },
+    {
+      "iso_name": "B.1.640.2 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 0.0783,
+      "predicted_log10_fold": 1.9718,
+      "error": 1.8935
+    },
+    {
+      "iso_name": "BA.2.12.1 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 3.0783,
+      "predicted_log10_fold": 2.5711,
+      "error": -0.5072
+    },
+    {
+      "iso_name": "BA.4/5 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 3.0783,
+      "predicted_log10_fold": 2.5503,
+      "error": -0.528
+    },
+    {
+      "iso_name": "BA.4.6 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 3.4849,
+      "predicted_log10_fold": 2.4743,
+      "error": -1.0106
+    },
+    {
+      "iso_name": "BA.2.75.2 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 3.4849,
+      "predicted_log10_fold": 2.6943,
+      "error": -0.7906
+    },
+    {
+      "iso_name": "BJ.1 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 2.0228,
+      "predicted_log10_fold": 4.3717,
+      "error": 2.3489
+    },
+    {
+      "iso_name": "BQ.1.1 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 3.7773,
+      "predicted_log10_fold": 2.8737,
+      "error": -0.9036
+    },
+    {
+      "iso_name": "XBB.1 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 3.7773,
+      "predicted_log10_fold": 4.0401,
+      "error": 0.2628
+    },
+    {
+      "iso_name": "BA.2.75 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 2.3053,
+      "predicted_log10_fold": 2.1676,
+      "error": -0.1377
+    },
+    {
+      "iso_name": "B.1.1.7 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": -0.2227,
+      "predicted_log10_fold": 0.0477,
+      "error": 0.2705
+    },
+    {
+      "iso_name": "P.1 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 2.0103,
+      "predicted_log10_fold": 1.7051,
+      "error": -0.3052
+    },
+    {
+      "iso_name": "B.1.617.2 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": -0.1774,
+      "predicted_log10_fold": -0.1433,
+      "error": 0.0341
+    },
+    {
+      "iso_name": "CH.1.1 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 3.0783,
+      "predicted_log10_fold": 2.7005,
+      "error": -0.3778
+    },
+    {
+      "iso_name": "BF.7 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 3.0783,
+      "predicted_log10_fold": 2.4743,
+      "error": -0.604
+    },
+    {
+      "iso_name": "XBB.1.5 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 2.7809,
+      "predicted_log10_fold": 3.3965,
+      "error": 0.6156
+    },
+    {
+      "iso_name": "XBB.1.16 Spike",
+      "antibody": "Casirivimab",
+      "target_log10_fold": 2.7809,
+      "predicted_log10_fold": 2.8541,
+      "error": 0.0732
+    },
+    {
+      "iso_name": "BA.1 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 3.1249,
+      "predicted_log10_fold": 3.06,
+      "error": -0.0649
+    },
+    {
+      "iso_name": "BA.2 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 2.1249,
+      "predicted_log10_fold": 2.3238,
+      "error": 0.1989
+    },
+    {
+      "iso_name": "C.1.2 Spike:-144del-243del-244del-859N",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 0.0594,
+      "predicted_log10_fold": -0.24,
+      "error": -0.2994
+    },
+    {
+      "iso_name": "B.1.351 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": -0.1116,
+      "predicted_log10_fold": -0.0123,
+      "error": 0.0993
+    },
+    {
+      "iso_name": "B.1.640.2 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": -0.5528,
+      "predicted_log10_fold": -0.3104,
+      "error": 0.2424
+    },
+    {
+      "iso_name": "BA.2.12.1 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 1.9996,
+      "predicted_log10_fold": 2.4949,
+      "error": 0.4953
+    },
+    {
+      "iso_name": "BA.4/5 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 2.203,
+      "predicted_log10_fold": 2.0396,
+      "error": -0.1634
+    },
+    {
+      "iso_name": "BA.4.6 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 2.3165,
+      "predicted_log10_fold": 2.0885,
+      "error": -0.228
+    },
+    {
+      "iso_name": "BA.2.75.2 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 3.5315,
+      "predicted_log10_fold": 2.6199,
+      "error": -0.9116
+    },
+    {
+      "iso_name": "BJ.1 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 3.8239,
+      "predicted_log10_fold": 4.1048,
+      "error": 0.2809
+    },
+    {
+      "iso_name": "BQ.1.1 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 3.8239,
+      "predicted_log10_fold": 2.8427,
+      "error": -0.9812
+    },
+    {
+      "iso_name": "XBB.1 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 3.8239,
+      "predicted_log10_fold": 3.7293,
+      "error": -0.0946
+    },
+    {
+      "iso_name": "BA.2.75 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 3.1249,
+      "predicted_log10_fold": 2.7324,
+      "error": -0.3926
+    },
+    {
+      "iso_name": "B.1.1.7 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": -0.331,
+      "predicted_log10_fold": 0.0751,
+      "error": 0.4061
+    },
+    {
+      "iso_name": "P.1 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 0.1249,
+      "predicted_log10_fold": -0.3326,
+      "error": -0.4576
+    },
+    {
+      "iso_name": "B.1.617.2 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": -0.0969,
+      "predicted_log10_fold": 0.7695,
+      "error": 0.8664
+    },
+    {
+      "iso_name": "CH.1.1 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 3.1249,
+      "predicted_log10_fold": 3.3339,
+      "error": 0.209
+    },
+    {
+      "iso_name": "BF.7 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 2.4664,
+      "predicted_log10_fold": 2.0885,
+      "error": -0.3778
+    },
+    {
+      "iso_name": "XBB.1.5 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 2.8239,
+      "predicted_log10_fold": 3.766,
+      "error": 0.9421
+    },
+    {
+      "iso_name": "XBB.1.16 Spike",
+      "antibody": "Imdevimab",
+      "target_log10_fold": 2.8239,
+      "predicted_log10_fold": 3.2101,
+      "error": 0.3862
+    }
+  ]
+}

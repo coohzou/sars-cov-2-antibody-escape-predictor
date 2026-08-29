@@ -1,0 +1,11 @@
+.venv/
+.idea/
+uploads/
+__pycache__/
+*.py[cod]
+.git/
+*.log
+response.json
+upload_test.json
+u*.json
+paper_*.json

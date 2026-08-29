@@ -1,0 +1,102 @@
+{
+  "variants": [
+    {
+      "name": "Wild Type",
+      "lineage": "B.1 / Wuhan-Hu-1",
+      "accession": "NC_045512.2",
+      "file": "wuhan_hu1_complete.fasta",
+      "in_variants_dir": false
+    },
+    {
+      "name": "Alpha",
+      "lineage": "B.1.1.7",
+      "accession": "OV054768.1",
+      "file": "alpha_complete.fasta",
+      "in_variants_dir": true
+    },
+    {
+      "name": "Beta",
+      "lineage": "B.1.351",
+      "accession": "MZ433432.1",
+      "file": "beta_complete.fasta",
+      "in_variants_dir": true
+    },
+    {
+      "name": "Gamma",
+      "lineage": "P.1",
+      "accession": "OR701610.1",
+      "file": "gamma_complete.fasta",
+      "in_variants_dir": true
+    },
+    {
+      "name": "Delta",
+      "lineage": "B.1.617.2",
+      "accession": "OK091006.1",
+      "file": "delta_complete.fasta",
+      "in_variants_dir": true
+    },
+    {
+      "name": "Omicron",
+      "lineage": "B.1.1.529 (early)",
+      "accession": "OP430898.1",
+      "file": "omicron_complete.fasta",
+      "in_variants_dir": true
+    },
+    {
+      "name": "BA.1",
+      "lineage": "BA.1",
+      "accession": "OL672836.1",
+      "file": "ba1_complete.fasta",
+      "in_variants_dir": true
+    },
+    {
+      "name": "BA.2",
+      "lineage": "BA.2",
+      "accession": "OM617939.1",
+      "file": "ba2_complete.fasta",
+      "in_variants_dir": true
+    },
+    {
+      "name": "BA.4",
+      "lineage": "BA.4",
+      "accession": "OR325409.1",
+      "file": "ba4_complete.fasta",
+      "in_variants_dir": true
+    },
+    {
+      "name": "BA.5",
+      "lineage": "BA.5",
+      "accession": "ON332989.1",
+      "file": "ba5_complete.fasta",
+      "in_variants_dir": true
+    },
+    {
+      "name": "BA.2.75.2",
+      "lineage": "BA.2.75.2",
+      "accession": "OR275016.1",
+      "file": "ba2_75_2_complete.fasta",
+      "in_variants_dir": true
+    },
+    {
+      "name": "BQ.1.1",
+      "lineage": "BQ.1.1",
+      "accession": "PP848077.1",
+      "file": "bq1_1_complete.fasta",
+      "in_variants_dir": true
+    },
+    {
+      "name": "XBB.1.5",
+      "lineage": "XBB.1.5",
+      "accession": "PP848050.1",
+      "file": "xbb1_5_complete.fasta",
+      "in_variants_dir": true
+    },
+    {
+      "name": "JN.1",
+      "lineage": "JN.1",
+      "accession": "PP198484.1",
+      "file": "jn1_complete.fasta",
+      "in_variants_dir": true
+    }
+  ]
+}

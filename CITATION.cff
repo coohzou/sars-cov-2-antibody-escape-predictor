@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+title: SARS-CoV-2 Antibody Escape Predictor
+message: >-
+  If you use this software, please cite the associated manuscript and repository.
+type: software
+authors:
+  - family-names: Zou
+    given-names: Lanxin
+  - family-names: He
+    given-names: Daihai
+repository-code: https://github.com/coohzou/sars-cov-2-antibody-escape-predictor
+license: MIT
+keywords:
+  - SARS-CoV-2
+  - monoclonal antibody
+  - IC50 prediction
+  - spike mutations
+  - ridge regression

@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+.idea/
+.vscode/
+*.log
+uploads/
+.env
+.env.*
+*.pkl.bak
+
+# Local test artifacts
+response.json
+upload_test.json
+u*.json
+paper_*.json
+
+# CoV-DRDB payload (local clone)
+data/training/local_expansion/drdb_payload/
+!data/training/local_expansion/README.md
+!data/training/local_expansion/.gitignore
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
