@@ -15,7 +15,7 @@ Used to train Casirivimab / Imdevimab IC50 Ridge models (offline only).
 | `ml_train.csv` | Training split (507 rows) |
 | `ml_test.csv` | Held-out ML test split (53 rows; 20 isoforms) |
 | `models/` | Trained Ridge models and `feature_columns.json` |
-| `drdb_payload/` | Optional local clone of CoV-DRDB (not committed) |
+| `local_expansion/drdb_payload/` | Optional local clone of CoV-DRDB (not committed) |
 
 Scripts: `expand_ic50_from_drdb.py`, `split_ml_dataset.py`, `train_neutralization_model.py`.
 

@@ -38,7 +38,7 @@ Compare outputs under `data/evaluation/` with the values reported in the manuscr
 ## Workflow B — full rebuild from CoV-DRDB
 
 ```bash
-git clone --depth 1 https://github.com/hivdb/covid-drdb-payload.git data/training/drdb_payload
+git clone --depth 1 https://github.com/hivdb/covid-drdb-payload.git data/training/local_expansion/drdb_payload
 python scripts/run_evaluation.py
 ```
 

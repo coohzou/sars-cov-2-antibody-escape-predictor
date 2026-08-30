@@ -21,7 +21,7 @@ python scripts/evaluate_ml_test_set.py
 python scripts/evaluate_pipeline_test_set.py
 python scripts/evaluate_pipeline_external_test.py
 
-# Full rebuild (requires data/training/drdb_payload/)
+# Full rebuild (requires data/training/local_expansion/drdb_payload/)
 python scripts/run_evaluation.py
 
 # Start web app

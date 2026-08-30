@@ -1,9 +1,9 @@
 """
 Run full unbiased evaluation workflow:
-1. Split ML data into train / test
-2. Retrain models on train only
-3. Evaluate ML on held-out test iso_names
-4. Evaluate pipeline on held-out NCBI variants
+1. Rebuild IC50 features from CoV-DRDB
+2. Split ML data into train / test
+3. Retrain models on train only
+4. Evaluate ML, pipeline, and external validation sets
 """
 
 import subprocess

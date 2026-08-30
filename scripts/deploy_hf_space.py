@@ -21,7 +21,7 @@ IGNORE = [
     "u*.json",
     "paper_*.json",
     "assets/*",
-    "data/training/drdb_payload/*",
+    "data/training/local_expansion/drdb_payload/*",
 ]
 
 
@@ -57,9 +57,6 @@ def main() -> None:
 
     space_readme = """---
 title: SARS-CoV-2 Antibody Escape Predictor
-emoji: 🧬
-colorFrom: blue
-colorTo: purple
 sdk: docker
 app_port: 7860
 pinned: false

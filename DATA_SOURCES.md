@@ -18,8 +18,8 @@ Resistance Database payload:
 - Processed tables: `data/training/cov_unibind/expanded_raw_potency.csv`
 - Feature matrix: `data/training/processed_ml_features.csv`
 
-To rebuild features locally, clone the payload into `data/training/drdb_payload/` and
-run `scripts/expand_ic50_from_drdb.py`. See `data/training/drdb_payload/README.md`.
+To rebuild features locally, clone the payload into `data/training/local_expansion/drdb_payload/` and
+run `scripts/expand_ic50_from_drdb.py`. See `data/training/local_expansion/README.md`.
 
 ## CoV-UniBind / Arora baseline
 
