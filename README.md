@@ -19,7 +19,7 @@ Open http://127.0.0.1:5000 and upload a `.fasta` file.
 
 ## Live demo (Render)
 
-Production deployment uses [Render Starter](https://render.com) for always-on hosting.
+Production deployment uses [Render Standard (`1c-2g`)](https://render.com) for always-on hosting with sufficient RAM for genome alignment.
 After connecting the GitHub repo in the Render dashboard, the service URL is typically:
 
 `https://sars-cov-2-antibody-escape-predictor.onrender.com`
