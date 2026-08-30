@@ -68,7 +68,7 @@
           "direction_correct": false
         }
       },
-      "elapsed_sec": 9.9,
+      "elapsed_sec": 10.4,
       "evaluation_split": "pipeline_external",
       "notes": "Modern Omicron sublineage; strong escape in DRDB."
     },
@@ -130,7 +130,7 @@
           "direction_correct": null
         }
       },
-      "elapsed_sec": 10.0,
+      "elapsed_sec": 10.5,
       "evaluation_split": "pipeline_external",
       "notes": ""
     },
@@ -190,7 +190,7 @@
           "direction_correct": null
         }
       },
-      "elapsed_sec": 10.2,
+      "elapsed_sec": 10.7,
       "evaluation_split": "pipeline_external",
       "notes": ""
     },
@@ -230,7 +230,7 @@
           "direction_correct": null
         }
       },
-      "elapsed_sec": 10.0,
+      "elapsed_sec": 9.5,
       "evaluation_split": "pipeline_external",
       "notes": "Sanity baseline; different accession from website reference NC_045512.2."
     },
@@ -275,7 +275,7 @@
           "direction_correct": null
         }
       },
-      "elapsed_sec": 10.2,
+      "elapsed_sec": 10.1,
       "evaluation_split": "pipeline_external",
       "notes": "Different accession from website Beta reference (MZ433432.1)."
     },
@@ -321,7 +321,7 @@
           "direction_correct": null
         }
       },
-      "elapsed_sec": 10.8,
+      "elapsed_sec": 10.0,
       "evaluation_split": "pipeline_external",
       "notes": "Different accession from website Gamma reference (OR701610.1)."
     },
@@ -367,7 +367,7 @@
           "direction_correct": null
         }
       },
-      "elapsed_sec": 10.9,
+      "elapsed_sec": 10.3,
       "evaluation_split": "pipeline_external",
       "notes": "Different accession from website Delta reference (OK091006.1)."
     }
