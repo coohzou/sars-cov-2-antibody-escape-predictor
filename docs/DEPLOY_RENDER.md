@@ -1,6 +1,6 @@
-# Deploy on Render (Starter)
+# Deploy on Render (Standard)
 
-Always-on hosting (~USD 7/month). No cold starts after the service is running.
+Always-on hosting on the **Standard** compute plan (`1c-2g`, ~USD 25/month). This tier provides 2 GB RAM, which is required for whole-genome Biopython alignment in the analysis pipeline.
 
 ## One-time setup
 
@@ -8,13 +8,13 @@ Always-on hosting (~USD 7/month). No cold starts after the service is running.
 2. **New → Blueprint** (or **New → Web Service** if Blueprint is unavailable).
 3. Connect repository: `coohzou/sars-cov-2-antibody-escape-predictor`.
 4. Render reads `render.yaml` at the repo root:
-   - **Plan:** Starter (required for always-on)
+   - **Plan:** `1c-2g` (Standard)
    - **Region:** Singapore (change in dashboard if you prefer Oregon/Frankfurt)
    - **Health check:** `/health`
-5. Click **Apply** / **Create Web Service** and add a payment method when prompted for Starter.
+5. Click **Apply** / **Create Web Service** and add a payment method when prompted.
 6. Wait for the first build (typically 3–6 minutes).
 
-Live URL (default):
+Live URL:
 
 `https://sars-cov-2-antibody-escape-predictor.onrender.com`
 
@@ -33,9 +33,11 @@ curl https://YOUR-SERVICE.onrender.com/ready
 
 `/ready` should report `"predictor_ready": true` when models loaded correctly.
 
+Upload a test FASTA (e.g. `data/prediction/gamma_complete.fasta`) from the web UI to confirm analysis completes without 502 errors.
+
 ## Updates
 
-Push to `main`; Render redeploys automatically (`autoDeploy: true` in `render.yaml`).
+Push to `main`; Render redeploys automatically (`autoDeployTrigger: commit` in `render.yaml`).
 
 ## Paper / README
 
