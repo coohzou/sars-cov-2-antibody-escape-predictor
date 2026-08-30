@@ -11,7 +11,7 @@
 | `expand_ic50_from_drdb.py` | Rebuild `processed_ml_features.csv` from CoV-DRDB |
 | `build_ml_features.py` | Legacy Arora-only rebuild (~83 rows) |
 | `download_variants.py` | Re-download reference FASTA from NCBI |
-| `deploy_hf_space.py` | Upload app to a Hugging Face Docker Space |
+| `derive_external_ic50_labels.py` | Recompute external-validation IC50 medians from CoV-DRDB export |
 
 ## Typical workflows
 

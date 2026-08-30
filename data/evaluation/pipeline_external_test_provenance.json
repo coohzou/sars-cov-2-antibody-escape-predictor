@@ -1,0 +1,500 @@
+{
+  "description": "CoV-DRDB IC50 labels for external validation. Medians computed from expanded_raw_potency.csv (CoV-DRDB rx_potency export).",
+  "method": "median(cleaned_potency) grouped by rx_name and iso_name",
+  "wild_type_iso_name": "B.1 Spike",
+  "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+  "drdb_repository": "https://github.com/hivdb/covid-drdb-payload",
+  "cases": {
+    "CH.1.1": {
+      "drdb_iso_name": "CH.1.1 Spike",
+      "antibodies": {
+        "Casirivimab": {
+          "value_ng_ml": 10000.0,
+          "censored": true,
+          "n_measurements": 1,
+          "drdb_references": [
+            "Cao22e"
+          ],
+          "drdb_source_files": [
+            "cao22e-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        },
+        "Imdevimab": {
+          "value_ng_ml": 10000.0,
+          "censored": true,
+          "n_measurements": 1,
+          "drdb_references": [
+            "Cao22e"
+          ],
+          "drdb_source_files": [
+            "cao22e-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        }
+      }
+    },
+    "BF.7": {
+      "drdb_iso_name": "BF.7 Spike",
+      "antibodies": {
+        "Casirivimab": {
+          "value_ng_ml": 10000.0,
+          "censored": true,
+          "n_measurements": 2,
+          "drdb_references": [
+            "Cao22e",
+            "Jian22"
+          ],
+          "drdb_source_files": [
+            "cao22e-pot.csv",
+            "jian22-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        },
+        "Imdevimab": {
+          "value_ng_ml": 2195.0,
+          "censored": false,
+          "n_measurements": 2,
+          "drdb_references": [
+            "Cao22e",
+            "Jian22"
+          ],
+          "drdb_source_files": [
+            "cao22e-pot.csv",
+            "jian22-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        }
+      }
+    },
+    "BA.2.12.1": {
+      "drdb_iso_name": "BA.2.12.1 Spike",
+      "antibodies": {
+        "Casirivimab": {
+          "value_ng_ml": 10000.0,
+          "censored": true,
+          "n_measurements": 13,
+          "drdb_references": [
+            "Arora22e",
+            "AroraEmbedded",
+            "Cao22b",
+            "Cao22c",
+            "Chen22e",
+            "Gruell22b",
+            "Gruell22c",
+            "Guo23",
+            "He23",
+            "Misasi22",
+            "Wang22d",
+            "Wang22h",
+            "Yamasoba22b"
+          ],
+          "drdb_source_files": [
+            "arora.txt",
+            "arora22e-pot.csv",
+            "cao22b-pot.csv",
+            "cao22c-pot.csv",
+            "chen22e-pot.csv",
+            "gruell22b-pot.csv",
+            "gruell22c-pot.csv",
+            "guo23-pot.csv",
+            "he23-pot.csv",
+            "misasi22-pot.csv",
+            "wang22d-pot.csv",
+            "wang22h-pot.csv",
+            "yamasoba22b-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        },
+        "Imdevimab": {
+          "value_ng_ml": 749.3,
+          "censored": false,
+          "n_measurements": 13,
+          "drdb_references": [
+            "Arora22e",
+            "AroraEmbedded",
+            "Cao22b",
+            "Cao22c",
+            "Chen22e",
+            "Gruell22b",
+            "Gruell22c",
+            "Guo23",
+            "He23",
+            "Misasi22",
+            "Wang22d",
+            "Wang22h",
+            "Yamasoba22b"
+          ],
+          "drdb_source_files": [
+            "arora.txt",
+            "arora22e-pot.csv",
+            "cao22b-pot.csv",
+            "cao22c-pot.csv",
+            "chen22e-pot.csv",
+            "gruell22b-pot.csv",
+            "gruell22c-pot.csv",
+            "guo23-pot.csv",
+            "he23-pot.csv",
+            "misasi22-pot.csv",
+            "wang22d-pot.csv",
+            "wang22h-pot.csv",
+            "yamasoba22b-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        }
+      }
+    },
+    "Wuhan-alt": {
+      "drdb_iso_name": "B.1 Spike",
+      "antibodies": {
+        "Casirivimab": {
+          "value_ng_ml": 8.35,
+          "censored": false,
+          "n_measurements": 10,
+          "drdb_references": [
+            "Arora22c",
+            "Arora22f",
+            "Arora23",
+            "AroraEmbedded",
+            "Cao22b",
+            "Gruell22c",
+            "He23",
+            "Saito22"
+          ],
+          "drdb_source_files": [
+            "arora.txt",
+            "arora22c-pot.csv",
+            "arora22f-pot.csv",
+            "arora23-pot.csv",
+            "cao22b-pot.csv",
+            "gruell22c-pot.csv",
+            "he23-pot.csv",
+            "saito22-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        },
+        "Imdevimab": {
+          "value_ng_ml": 7.5,
+          "censored": false,
+          "n_measurements": 10,
+          "drdb_references": [
+            "Arora22c",
+            "Arora22f",
+            "Arora23",
+            "AroraEmbedded",
+            "Cao22b",
+            "Gruell22c",
+            "He23",
+            "Saito22"
+          ],
+          "drdb_source_files": [
+            "arora.txt",
+            "arora22c-pot.csv",
+            "arora22f-pot.csv",
+            "arora23-pot.csv",
+            "cao22b-pot.csv",
+            "gruell22c-pot.csv",
+            "he23-pot.csv",
+            "saito22-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        }
+      }
+    },
+    "Beta-alt": {
+      "drdb_iso_name": "B.1.351 Spike",
+      "antibodies": {
+        "Casirivimab": {
+          "value_ng_ml": 357.7,
+          "censored": false,
+          "n_measurements": 16,
+          "drdb_references": [
+            "Arora22c",
+            "AroraEmbedded",
+            "Cao22d",
+            "Chen22",
+            "Chen22e",
+            "Du22",
+            "Hoffmann21",
+            "Hoffmann21c",
+            "Miyakawa21b",
+            "Pelzek22",
+            "Tada21",
+            "Tada21c",
+            "Tada21d",
+            "Tada21e",
+            "Tada22",
+            "Yuan22"
+          ],
+          "drdb_source_files": [
+            "arora.txt",
+            "arora22c-pot.csv",
+            "cao22d-pot.csv",
+            "chen22-pot.csv",
+            "chen22e-pot.csv",
+            "du22-pot.csv",
+            "hoffmann21-pot.csv",
+            "hoffmann21c-pot.csv",
+            "miyakawa21b-pot.csv",
+            "pelzek22-pot.csv",
+            "tada21-pot.csv",
+            "tada21c-pot.csv",
+            "tada21d-pot.csv",
+            "tada21e-pot.csv",
+            "tada22-pot.csv",
+            "yuan22-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        },
+        "Imdevimab": {
+          "value_ng_ml": 5.8,
+          "censored": false,
+          "n_measurements": 17,
+          "drdb_references": [
+            "Arora22c",
+            "AroraEmbedded",
+            "Cao22d",
+            "Chen22",
+            "Chen22e",
+            "Du22",
+            "Hoffmann21",
+            "Hoffmann21c",
+            "Miyakawa21b",
+            "Pelzek22",
+            "Tada21",
+            "Tada21c",
+            "Tada21d",
+            "Tada21e",
+            "Tada22",
+            "Wang22c",
+            "Yuan22"
+          ],
+          "drdb_source_files": [
+            "arora.txt",
+            "arora22c-pot.csv",
+            "cao22d-pot.csv",
+            "chen22-pot.csv",
+            "chen22e-pot.csv",
+            "du22-pot.csv",
+            "hoffmann21-pot.csv",
+            "hoffmann21c-pot.csv",
+            "miyakawa21b-pot.csv",
+            "pelzek22-pot.csv",
+            "tada21-pot.csv",
+            "tada21c-pot.csv",
+            "tada21d-pot.csv",
+            "tada21e-pot.csv",
+            "tada22-pot.csv",
+            "wang22c-pot.csv",
+            "yuan22-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        }
+      }
+    },
+    "Gamma-alt": {
+      "drdb_iso_name": "P.1 Spike",
+      "antibodies": {
+        "Casirivimab": {
+          "value_ng_ml": 855.0,
+          "censored": false,
+          "n_measurements": 6,
+          "drdb_references": [
+            "Cao22d",
+            "Hoffmann21",
+            "Miyakawa21b",
+            "Pelzek22",
+            "Tada21",
+            "Yuan22"
+          ],
+          "drdb_source_files": [
+            "cao22d-pot.csv",
+            "hoffmann21-pot.csv",
+            "miyakawa21b-pot.csv",
+            "pelzek22-pot.csv",
+            "tada21-pot.csv",
+            "yuan22-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        },
+        "Imdevimab": {
+          "value_ng_ml": 10.0,
+          "censored": false,
+          "n_measurements": 7,
+          "drdb_references": [
+            "Cao22d",
+            "Hoffmann21",
+            "Miyakawa21b",
+            "Pelzek22",
+            "Tada21",
+            "Wang22c",
+            "Yuan22"
+          ],
+          "drdb_source_files": [
+            "cao22d-pot.csv",
+            "hoffmann21-pot.csv",
+            "miyakawa21b-pot.csv",
+            "pelzek22-pot.csv",
+            "tada21-pot.csv",
+            "wang22c-pot.csv",
+            "yuan22-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        }
+      }
+    },
+    "Delta-alt": {
+      "drdb_iso_name": "B.1.617.2 Spike",
+      "antibodies": {
+        "Casirivimab": {
+          "value_ng_ml": 5.55,
+          "censored": false,
+          "n_measurements": 10,
+          "drdb_references": [
+            "Cao22d",
+            "Chen22",
+            "Chen22e",
+            "He23",
+            "Miyakawa21b",
+            "Pelzek22",
+            "Ragonnet-Cronin22",
+            "Tada22",
+            "Yuan22",
+            "Zhou22"
+          ],
+          "drdb_source_files": [
+            "cao22d-pot.csv",
+            "chen22-pot.csv",
+            "chen22e-pot.csv",
+            "he23-pot.csv",
+            "miyakawa21b-pot.csv",
+            "pelzek22-pot.csv",
+            "ragonnet-cronin22-pot.csv",
+            "tada22-pot.csv",
+            "yuan22-pot.csv",
+            "zhou22-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        },
+        "Imdevimab": {
+          "value_ng_ml": 6.0,
+          "censored": false,
+          "n_measurements": 11,
+          "drdb_references": [
+            "Cao22d",
+            "Chen22",
+            "Chen22e",
+            "He23",
+            "Miyakawa21b",
+            "Pelzek22",
+            "Ragonnet-Cronin22",
+            "Tada22",
+            "Wang22c",
+            "Yuan22",
+            "Zhou22"
+          ],
+          "drdb_source_files": [
+            "cao22d-pot.csv",
+            "chen22-pot.csv",
+            "chen22e-pot.csv",
+            "he23-pot.csv",
+            "miyakawa21b-pot.csv",
+            "pelzek22-pot.csv",
+            "ragonnet-cronin22-pot.csv",
+            "tada22-pot.csv",
+            "wang22c-pot.csv",
+            "yuan22-pot.csv",
+            "zhou22-pot.csv"
+          ],
+          "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+          "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+          "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+        }
+      }
+    }
+  },
+  "wild_type_ic50_ng_ml": {
+    "Casirivimab": {
+      "value_ng_ml": 8.35,
+      "censored": false,
+      "n_measurements": 10,
+      "drdb_references": [
+        "Arora22c",
+        "Arora22f",
+        "Arora23",
+        "AroraEmbedded",
+        "Cao22b",
+        "Gruell22c",
+        "He23",
+        "Saito22"
+      ],
+      "drdb_source_files": [
+        "arora.txt",
+        "arora22c-pot.csv",
+        "arora22f-pot.csv",
+        "arora23-pot.csv",
+        "cao22b-pot.csv",
+        "gruell22c-pot.csv",
+        "he23-pot.csv",
+        "saito22-pot.csv"
+      ],
+      "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+      "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+      "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+    },
+    "Imdevimab": {
+      "value_ng_ml": 7.5,
+      "censored": false,
+      "n_measurements": 10,
+      "drdb_references": [
+        "Arora22c",
+        "Arora22f",
+        "Arora23",
+        "AroraEmbedded",
+        "Cao22b",
+        "Gruell22c",
+        "He23",
+        "Saito22"
+      ],
+      "drdb_source_files": [
+        "arora.txt",
+        "arora22c-pot.csv",
+        "arora22f-pot.csv",
+        "arora23-pot.csv",
+        "cao22b-pot.csv",
+        "gruell22c-pot.csv",
+        "he23-pot.csv",
+        "saito22-pot.csv"
+      ],
+      "derivation": "median cleaned IC50 (ng/ml) from expanded_raw_potency.csv",
+      "source_table": "data/training/cov_unibind/expanded_raw_potency.csv",
+      "drdb_payload": "https://github.com/hivdb/covid-drdb-payload"
+    }
+  }
+}

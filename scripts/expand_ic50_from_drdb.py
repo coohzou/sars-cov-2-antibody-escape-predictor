@@ -1,7 +1,7 @@
 """
 Build processed_ml_features.csv from Stanford CoV-DRDB + Arora baseline.
 
-Uses the website's 96-mutation panel, median-aggregates duplicate isoform
+Uses the website's 95-mutation panel, median-aggregates duplicate isoform
 measurements, and writes to data/training/processed_ml_features.csv.
 
 DRDB payload (one-time):
