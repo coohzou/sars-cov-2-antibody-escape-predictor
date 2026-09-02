@@ -1,0 +1,13 @@
+{
+  "description": "Wild-type IC50 baselines for inference and external validation. Median cleaned potency (ng/ml) for CoV-DRDB isoform B.1 Spike per antibody.",
+  "source_file": "D:\\covid_website_project\\data\\training\\cov_unibind\\expanded_raw_potency.csv",
+  "iso_name": "B.1 Spike",
+  "ic50_ng_ml": {
+    "Casirivimab": 8.35,
+    "Imdevimab": 7.5
+  },
+  "ic50_ug_ml": {
+    "Casirivimab": 0.00835,
+    "Imdevimab": 0.0075
+  }
+}

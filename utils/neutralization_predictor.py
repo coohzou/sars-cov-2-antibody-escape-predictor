@@ -6,14 +6,12 @@ import joblib
 import numpy as np
 
 from utils.paths import COV_UNIBIND_DIR, MODEL_DIR
+from utils.wildtype_baseline import load_wildtype_ic50_ug_ml
 
 logger = logging.getLogger(__name__)
 
-# Wild-type IC50 baselines (μg/ml) from CoV-UniBind data
-DEFAULT_WILDTYPE_IC50 = {
-    "Casirivimab": 0.011725,
-    "Imdevimab": 0.015525,
-}
+# Overwritten from cov_unibind/wildtype_ic50.csv (B.1 Spike DRDB medians).
+DEFAULT_WILDTYPE_IC50 = load_wildtype_ic50_ug_ml()
 
 
 class NeutralizationPredictor:

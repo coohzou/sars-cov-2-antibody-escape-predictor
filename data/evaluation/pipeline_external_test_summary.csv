@@ -1,8 +1,8 @@
 ﻿case,lineage,accession,expected_major,matched_variant,identification_correct,similarity_pct,mutation_count,casi_lit_ng_ml,casi_pred_ng_ml,casi_log10_fold_err,imd_lit_ng_ml,imd_pred_ng_ml,imd_log10_fold_err,cocktail_lit_ng_ml,cocktail_pred_ng_ml,risk,elapsed_sec
-CH.1.1,CH.1.1 (BA.2.75 branch),PP847896.1,Omicron,Omicron,True,98.21,20,10000.0,3587.3,,10000.0,1944.3,,10000.0,1944.3,High,10.4
-BF.7,BF.7 (BA.5 sublineage),PP847973.1,Omicron,Omicron,True,98.48,21,10000.0,2782.7,,2195.0,396.4,-1.0593,2195.0,396.4,High,10.5
-BA.2.12.1,BA.2.12.1,OR326585.1,Omicron,Omicron,True,99.76,19,10000.0,5575.4,,749.3,909.6,-0.2318,749.3,909.6,High,10.7
-Wuhan-alt,Wuhan-Hu-1 (alternate NCBI accession),MN908947.3,Wild Type,Wild Type,True,100.0,0,8.35,20.7,0.248,7.5,31.3,0.3054,7.5,20.7,Potentially Effective,9.5
-Beta-alt,B.1.351 (alternate NCBI strain),OR353131.1,Beta,Beta,True,99.97,4,357.7,1231.1,0.3894,5.8,18.8,0.1944,5.8,18.8,Potentially Effective,10.1
-Gamma-alt,P.1 (alternate NCBI strain),MW642250.1,Gamma,Gamma,True,100.0,5,855.0,545.0,-0.3429,10.0,16.9,-0.0875,10.0,16.9,Potentially Effective,10.0
-Delta-alt,B.1.617.2 (alternate NCBI strain),OR323381.1,Delta,Delta,True,99.92,5,5.55,30.6,0.594,6.0,148.9,1.0787,5.55,30.6,Moderate,10.3
+CH.1.1,CH.1.1 (BA.2.75 branch),PP847896.1,Omicron,Omicron,True,98.21,20,10000.0,2554.7,,10000.0,939.3,,10000.0,939.3,High,11.5
+BF.7,BF.7 (BA.5 sublineage),PP847973.1,Omicron,Omicron,True,98.48,21,10000.0,1981.7,,2195.0,191.5,-1.0593,2195.0,191.5,High,12.8
+BA.2.12.1,BA.2.12.1,OR326585.1,Omicron,Omicron,True,99.76,19,10000.0,3970.5,,749.3,439.4,-0.2318,749.3,439.4,High,12.6
+Wuhan-alt,Wuhan-Hu-1 (alternate NCBI accession),MN908947.3,Wild Type,Wild Type,True,100.0,0,8.35,14.8,0.248,7.5,15.1,0.3054,7.5,14.8,Potentially Effective,12.6
+Beta-alt,B.1.351 (alternate NCBI strain),OR353131.1,Beta,Beta,True,99.97,4,357.7,876.7,0.3894,5.8,9.1,0.1944,5.8,9.1,Potentially Effective,12.9
+Gamma-alt,P.1 (alternate NCBI strain),MW642250.1,Gamma,Gamma,True,100.0,5,855.0,388.2,-0.3429,10.0,8.2,-0.0875,10.0,8.2,Potentially Effective,13.1
+Delta-alt,B.1.617.2 (alternate NCBI strain),OR323381.1,Delta,Delta,True,99.92,5,5.55,21.8,0.594,6.0,71.9,1.0787,5.55,21.8,Potentially Effective,13.0

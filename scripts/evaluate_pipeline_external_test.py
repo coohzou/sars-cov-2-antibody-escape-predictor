@@ -21,6 +21,7 @@ sys.path.insert(0, PROJECT_ROOT)
 from utils.paths import EVALUATION_DIR
 from utils.sequence_analyzer import SequenceAnalyzer
 from utils.neutralization_predictor import neutralization_predictor
+from utils.wildtype_baseline import load_wildtype_ic50_ng_ml
 
 CONFIG_PATH = os.path.join(EVALUATION_DIR, "pipeline_external_test.json")
 EXTERNAL_DIR = os.path.join(EVALUATION_DIR, "external")
@@ -100,7 +101,7 @@ def ic50_metrics(rows):
 
 def main():
     config = load_json(CONFIG_PATH)
-    wt = config["wt_ic50_ng_ml"]
+    wt = load_wildtype_ic50_ng_ml()
     analyzer = SequenceAnalyzer()
     rows = []
 

@@ -1,9 +1,6 @@
 {
   "description": "NCBI complete genomes never used as website reference FASTAs, with CoV-DRDB Casi/Imdev IC50 labels for prediction validation.",
-  "wt_ic50_ng_ml": {
-    "Casirivimab": 8.35,
-    "Imdevimab": 7.5
-  },
+  "wildtype_reference": "B.1 Spike medians from data/training/cov_unibind/wildtype_ic50.csv (see scripts/derive_wildtype_ic50.py)",
   "cases": [
     {
       "name": "CH.1.1",
@@ -13,14 +10,8 @@
       "expected_major_variant": "Omicron",
       "drdb_iso_name": "CH.1.1 Spike",
       "literature_ic50_ng_ml": {
-        "Casirivimab": {
-          "value": 10000.0,
-          "censored": true
-        },
-        "Imdevimab": {
-          "value": 10000.0,
-          "censored": true
-        }
+        "Casirivimab": {"value": 10000.0, "censored": true},
+        "Imdevimab": {"value": 10000.0, "censored": true}
       },
       "notes": "Modern Omicron sublineage; strong escape in DRDB."
     },
@@ -32,14 +23,8 @@
       "expected_major_variant": "Omicron",
       "drdb_iso_name": "BF.7 Spike",
       "literature_ic50_ng_ml": {
-        "Casirivimab": {
-          "value": 10000.0,
-          "censored": true
-        },
-        "Imdevimab": {
-          "value": 2195.0,
-          "censored": false
-        }
+        "Casirivimab": {"value": 10000.0, "censored": true},
+        "Imdevimab": {"value": 2195.0, "censored": false}
       }
     },
     {
@@ -50,14 +35,8 @@
       "expected_major_variant": "Omicron",
       "drdb_iso_name": "BA.2.12.1 Spike",
       "literature_ic50_ng_ml": {
-        "Casirivimab": {
-          "value": 10000.0,
-          "censored": true
-        },
-        "Imdevimab": {
-          "value": 749.3,
-          "censored": false
-        }
+        "Casirivimab": {"value": 10000.0, "censored": true},
+        "Imdevimab": {"value": 749.3, "censored": false}
       }
     },
     {
@@ -68,14 +47,8 @@
       "expected_major_variant": "Wild Type",
       "drdb_iso_name": "B.1 Spike",
       "literature_ic50_ng_ml": {
-        "Casirivimab": {
-          "value": 8.35,
-          "censored": false
-        },
-        "Imdevimab": {
-          "value": 7.5,
-          "censored": false
-        }
+        "Casirivimab": {"value": 8.35, "censored": false},
+        "Imdevimab": {"value": 7.5, "censored": false}
       },
       "notes": "Sanity baseline; different accession from website reference NC_045512.2."
     },
@@ -87,14 +60,8 @@
       "expected_major_variant": "Beta",
       "drdb_iso_name": "B.1.351 Spike",
       "literature_ic50_ng_ml": {
-        "Casirivimab": {
-          "value": 357.7,
-          "censored": false
-        },
-        "Imdevimab": {
-          "value": 5.8,
-          "censored": false
-        }
+        "Casirivimab": {"value": 357.7, "censored": false},
+        "Imdevimab": {"value": 5.8, "censored": false}
       },
       "notes": "Different accession from website Beta reference (MZ433432.1)."
     },
@@ -106,14 +73,8 @@
       "expected_major_variant": "Gamma",
       "drdb_iso_name": "P.1 Spike",
       "literature_ic50_ng_ml": {
-        "Casirivimab": {
-          "value": 855.0,
-          "censored": false
-        },
-        "Imdevimab": {
-          "value": 10.0,
-          "censored": false
-        }
+        "Casirivimab": {"value": 855.0, "censored": false},
+        "Imdevimab": {"value": 10.0, "censored": false}
       },
       "notes": "Different accession from website Gamma reference (OR701610.1)."
     },
@@ -125,21 +86,10 @@
       "expected_major_variant": "Delta",
       "drdb_iso_name": "B.1.617.2 Spike",
       "literature_ic50_ng_ml": {
-        "Casirivimab": {
-          "value": 5.55,
-          "censored": false
-        },
-        "Imdevimab": {
-          "value": 6.0,
-          "censored": false
-        }
+        "Casirivimab": {"value": 5.55, "censored": false},
+        "Imdevimab": {"value": 6.0, "censored": false}
       },
       "notes": "Different accession from website Delta reference (OK091006.1)."
     }
-  ],
-  "wt_ic50_derivation": {
-    "iso_name": "B.1 Spike",
-    "method": "median(cleaned_potency) grouped by rx_name and iso_name",
-    "source_table": "data/training/cov_unibind/expanded_raw_potency.csv"
-  }
+  ]
 }

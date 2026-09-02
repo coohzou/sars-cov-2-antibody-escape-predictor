@@ -44,14 +44,14 @@
         "N969K"
       ],
       "cocktail_ic50_literature_ng_ml": 10000.0,
-      "cocktail_ic50_predicted_ng_ml": 1944.3,
+      "cocktail_ic50_predicted_ng_ml": 939.3,
       "summary_risk": "High",
       "ic50_comparison": {
         "Casirivimab": {
           "literature_ng_ml": 10000.0,
           "literature_log10_fold": 3.0783,
-          "predicted_ug_ml": 3.5873,
-          "predicted_ng_ml": 3587.3,
+          "predicted_ug_ml": 2.5547,
+          "predicted_ng_ml": 2554.7,
           "predicted_log10_fold": 2.4857,
           "log10_fold_error": null,
           "censored": true,
@@ -60,15 +60,15 @@
         "Imdevimab": {
           "literature_ng_ml": 10000.0,
           "literature_log10_fold": 3.1249,
-          "predicted_ug_ml": 1.9443,
-          "predicted_ng_ml": 1944.3,
+          "predicted_ug_ml": 0.9393,
+          "predicted_ng_ml": 939.3,
           "predicted_log10_fold": 2.0977,
           "log10_fold_error": null,
           "censored": true,
           "direction_correct": false
         }
       },
-      "elapsed_sec": 10.4,
+      "elapsed_sec": 11.5,
       "evaluation_split": "pipeline_external",
       "notes": "Modern Omicron sublineage; strong escape in DRDB."
     },
@@ -106,14 +106,14 @@
         "N969K"
       ],
       "cocktail_ic50_literature_ng_ml": 2195.0,
-      "cocktail_ic50_predicted_ng_ml": 396.4,
+      "cocktail_ic50_predicted_ng_ml": 191.5,
       "summary_risk": "High",
       "ic50_comparison": {
         "Casirivimab": {
           "literature_ng_ml": 10000.0,
           "literature_log10_fold": 3.0783,
-          "predicted_ug_ml": 2.7827,
-          "predicted_ng_ml": 2782.7,
+          "predicted_ug_ml": 1.9817,
+          "predicted_ng_ml": 1981.7,
           "predicted_log10_fold": 2.3754,
           "log10_fold_error": null,
           "censored": true,
@@ -122,15 +122,15 @@
         "Imdevimab": {
           "literature_ng_ml": 2195.0,
           "literature_log10_fold": 2.4664,
-          "predicted_ug_ml": 0.3964,
-          "predicted_ng_ml": 396.4,
+          "predicted_ug_ml": 0.1915,
+          "predicted_ng_ml": 191.5,
           "predicted_log10_fold": 1.4071,
           "log10_fold_error": -1.0593,
           "censored": false,
           "direction_correct": null
         }
       },
-      "elapsed_sec": 10.5,
+      "elapsed_sec": 12.8,
       "evaluation_split": "pipeline_external",
       "notes": ""
     },
@@ -166,14 +166,14 @@
         "N969K"
       ],
       "cocktail_ic50_literature_ng_ml": 749.3,
-      "cocktail_ic50_predicted_ng_ml": 909.6,
+      "cocktail_ic50_predicted_ng_ml": 439.4,
       "summary_risk": "High",
       "ic50_comparison": {
         "Casirivimab": {
           "literature_ng_ml": 10000.0,
           "literature_log10_fold": 3.0783,
-          "predicted_ug_ml": 5.5754,
-          "predicted_ng_ml": 5575.4,
+          "predicted_ug_ml": 3.9705,
+          "predicted_ng_ml": 3970.5,
           "predicted_log10_fold": 2.6772,
           "log10_fold_error": null,
           "censored": true,
@@ -182,15 +182,15 @@
         "Imdevimab": {
           "literature_ng_ml": 749.3,
           "literature_log10_fold": 1.9996,
-          "predicted_ug_ml": 0.9096,
-          "predicted_ng_ml": 909.6,
+          "predicted_ug_ml": 0.4394,
+          "predicted_ng_ml": 439.4,
           "predicted_log10_fold": 1.7678,
           "log10_fold_error": -0.2318,
           "censored": false,
           "direction_correct": null
         }
       },
-      "elapsed_sec": 10.7,
+      "elapsed_sec": 12.6,
       "evaluation_split": "pipeline_external",
       "notes": ""
     },
@@ -206,14 +206,14 @@
       "mutation_count": 0,
       "detected_mutations": [],
       "cocktail_ic50_literature_ng_ml": 7.5,
-      "cocktail_ic50_predicted_ng_ml": 20.7,
+      "cocktail_ic50_predicted_ng_ml": 14.8,
       "summary_risk": "Potentially Effective",
       "ic50_comparison": {
         "Casirivimab": {
           "literature_ng_ml": 8.35,
           "literature_log10_fold": 0.0,
-          "predicted_ug_ml": 0.0207,
-          "predicted_ng_ml": 20.7,
+          "predicted_ug_ml": 0.0148,
+          "predicted_ng_ml": 14.8,
           "predicted_log10_fold": 0.248,
           "log10_fold_error": 0.248,
           "censored": false,
@@ -222,15 +222,15 @@
         "Imdevimab": {
           "literature_ng_ml": 7.5,
           "literature_log10_fold": 0.0,
-          "predicted_ug_ml": 0.0313,
-          "predicted_ng_ml": 31.3,
+          "predicted_ug_ml": 0.0151,
+          "predicted_ng_ml": 15.1,
           "predicted_log10_fold": 0.3054,
           "log10_fold_error": 0.3054,
           "censored": false,
           "direction_correct": null
         }
       },
-      "elapsed_sec": 9.5,
+      "elapsed_sec": 12.6,
       "evaluation_split": "pipeline_external",
       "notes": "Sanity baseline; different accession from website reference NC_045512.2."
     },
@@ -251,14 +251,14 @@
         "K417N"
       ],
       "cocktail_ic50_literature_ng_ml": 5.8,
-      "cocktail_ic50_predicted_ng_ml": 18.8,
+      "cocktail_ic50_predicted_ng_ml": 9.1,
       "summary_risk": "Potentially Effective",
       "ic50_comparison": {
         "Casirivimab": {
           "literature_ng_ml": 357.7,
           "literature_log10_fold": 1.6318,
-          "predicted_ug_ml": 1.2311,
-          "predicted_ng_ml": 1231.1,
+          "predicted_ug_ml": 0.8767,
+          "predicted_ng_ml": 876.7,
           "predicted_log10_fold": 2.0212,
           "log10_fold_error": 0.3894,
           "censored": false,
@@ -267,15 +267,15 @@
         "Imdevimab": {
           "literature_ng_ml": 5.8,
           "literature_log10_fold": -0.1116,
-          "predicted_ug_ml": 0.0188,
-          "predicted_ng_ml": 18.8,
+          "predicted_ug_ml": 0.0091,
+          "predicted_ng_ml": 9.1,
           "predicted_log10_fold": 0.0828,
           "log10_fold_error": 0.1944,
           "censored": false,
           "direction_correct": null
         }
       },
-      "elapsed_sec": 10.1,
+      "elapsed_sec": 12.9,
       "evaluation_split": "pipeline_external",
       "notes": "Different accession from website Beta reference (MZ433432.1)."
     },
@@ -297,14 +297,14 @@
         "H655Y"
       ],
       "cocktail_ic50_literature_ng_ml": 10.0,
-      "cocktail_ic50_predicted_ng_ml": 16.9,
+      "cocktail_ic50_predicted_ng_ml": 8.2,
       "summary_risk": "Potentially Effective",
       "ic50_comparison": {
         "Casirivimab": {
           "literature_ng_ml": 855.0,
           "literature_log10_fold": 2.0103,
-          "predicted_ug_ml": 0.545,
-          "predicted_ng_ml": 545.0,
+          "predicted_ug_ml": 0.3882,
+          "predicted_ng_ml": 388.2,
           "predicted_log10_fold": 1.6674,
           "log10_fold_error": -0.3429,
           "censored": false,
@@ -313,15 +313,15 @@
         "Imdevimab": {
           "literature_ng_ml": 10.0,
           "literature_log10_fold": 0.1249,
-          "predicted_ug_ml": 0.0169,
-          "predicted_ng_ml": 16.9,
+          "predicted_ug_ml": 0.0082,
+          "predicted_ng_ml": 8.2,
           "predicted_log10_fold": 0.0374,
           "log10_fold_error": -0.0875,
           "censored": false,
           "direction_correct": null
         }
       },
-      "elapsed_sec": 10.0,
+      "elapsed_sec": 13.1,
       "evaluation_split": "pipeline_external",
       "notes": "Different accession from website Gamma reference (OR701610.1)."
     },
@@ -343,14 +343,14 @@
         "T19R"
       ],
       "cocktail_ic50_literature_ng_ml": 5.55,
-      "cocktail_ic50_predicted_ng_ml": 30.6,
-      "summary_risk": "Moderate",
+      "cocktail_ic50_predicted_ng_ml": 21.8,
+      "summary_risk": "Potentially Effective",
       "ic50_comparison": {
         "Casirivimab": {
           "literature_ng_ml": 5.55,
           "literature_log10_fold": -0.1774,
-          "predicted_ug_ml": 0.0306,
-          "predicted_ng_ml": 30.6,
+          "predicted_ug_ml": 0.0218,
+          "predicted_ng_ml": 21.8,
           "predicted_log10_fold": 0.4166,
           "log10_fold_error": 0.594,
           "censored": false,
@@ -359,15 +359,15 @@
         "Imdevimab": {
           "literature_ng_ml": 6.0,
           "literature_log10_fold": -0.0969,
-          "predicted_ug_ml": 0.1489,
-          "predicted_ng_ml": 148.9,
+          "predicted_ug_ml": 0.0719,
+          "predicted_ng_ml": 71.9,
           "predicted_log10_fold": 0.9818,
           "log10_fold_error": 1.0787,
           "censored": false,
           "direction_correct": null
         }
       },
-      "elapsed_sec": 10.3,
+      "elapsed_sec": 13.0,
       "evaluation_split": "pipeline_external",
       "notes": "Different accession from website Delta reference (OK091006.1)."
     }

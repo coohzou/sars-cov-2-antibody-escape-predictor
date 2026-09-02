@@ -30,6 +30,11 @@ Baseline potency tables and archived source CSVs under `data/training/cov_unibin
 (e.g. `mutation_ic50.csv`, `wildtype_ic50.csv`, `raw/arora*.csv`) complement DRDB
 measurements during feature expansion.
 
+**Wild-type IC50 at inference** uses the same B.1 Spike medians as external validation:
+`data/training/cov_unibind/wildtype_ic50.csv` (regenerate with
+`python scripts/derive_wildtype_ic50.py`). Provenance:
+`wildtype_ic50_provenance.json`.
+
 ## External validation IC50 labels
 
 Literature comparison values in `data/evaluation/pipeline_external_test.json` are
@@ -40,8 +45,9 @@ limit (≥10,000 ng/ml) are marked censored.
 - Regenerate labels: `python scripts/derive_external_ic50_labels.py`
 - Full provenance (study IDs, source files, measurement counts):
   `data/evaluation/pipeline_external_test_provenance.json`
-- Wild-type reference for log10 fold-change in external evaluation: B.1 Spike
-  medians (Casirivimab 8.35 ng/ml, Imdevimab 7.5 ng/ml from the same table)
+- Wild-type reference for log10 fold-change and inference IC50: B.1 Spike medians
+  loaded from `data/training/cov_unibind/wildtype_ic50.csv` (Casirivimab 8.35 ng/ml,
+  Imdevimab 7.5 ng/ml; see `scripts/derive_wildtype_ic50.py`)
 
 ## Models
 
