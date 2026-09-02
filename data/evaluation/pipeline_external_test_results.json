@@ -44,7 +44,7 @@
         "N969K"
       ],
       "cocktail_ic50_literature_ng_ml": 10000.0,
-      "cocktail_ic50_predicted_ng_ml": 939.3,
+      "cocktail_ic50_predicted_ng_ml": 1747.0,
       "summary_risk": "High",
       "ic50_comparison": {
         "Casirivimab": {
@@ -68,7 +68,7 @@
           "direction_correct": false
         }
       },
-      "elapsed_sec": 11.5,
+      "elapsed_sec": 10.0,
       "evaluation_split": "pipeline_external",
       "notes": "Modern Omicron sublineage; strong escape in DRDB."
     },
@@ -105,8 +105,8 @@
         "Q954H",
         "N969K"
       ],
-      "cocktail_ic50_literature_ng_ml": 2195.0,
-      "cocktail_ic50_predicted_ng_ml": 191.5,
+      "cocktail_ic50_literature_ng_ml": 6097.5,
+      "cocktail_ic50_predicted_ng_ml": 1086.6,
       "summary_risk": "High",
       "ic50_comparison": {
         "Casirivimab": {
@@ -130,7 +130,7 @@
           "direction_correct": null
         }
       },
-      "elapsed_sec": 12.8,
+      "elapsed_sec": 9.8,
       "evaluation_split": "pipeline_external",
       "notes": ""
     },
@@ -165,8 +165,8 @@
         "Q954H",
         "N969K"
       ],
-      "cocktail_ic50_literature_ng_ml": 749.3,
-      "cocktail_ic50_predicted_ng_ml": 439.4,
+      "cocktail_ic50_literature_ng_ml": 5374.65,
+      "cocktail_ic50_predicted_ng_ml": 2205.0,
       "summary_risk": "High",
       "ic50_comparison": {
         "Casirivimab": {
@@ -190,7 +190,7 @@
           "direction_correct": null
         }
       },
-      "elapsed_sec": 12.6,
+      "elapsed_sec": 9.8,
       "evaluation_split": "pipeline_external",
       "notes": ""
     },
@@ -205,8 +205,8 @@
       "similarity": 100.0,
       "mutation_count": 0,
       "detected_mutations": [],
-      "cocktail_ic50_literature_ng_ml": 7.5,
-      "cocktail_ic50_predicted_ng_ml": 14.8,
+      "cocktail_ic50_literature_ng_ml": 7.925,
+      "cocktail_ic50_predicted_ng_ml": 15.0,
       "summary_risk": "Potentially Effective",
       "ic50_comparison": {
         "Casirivimab": {
@@ -230,7 +230,7 @@
           "direction_correct": null
         }
       },
-      "elapsed_sec": 12.6,
+      "elapsed_sec": 10.2,
       "evaluation_split": "pipeline_external",
       "notes": "Sanity baseline; different accession from website reference NC_045512.2."
     },
@@ -250,9 +250,9 @@
         "E484K",
         "K417N"
       ],
-      "cocktail_ic50_literature_ng_ml": 5.8,
-      "cocktail_ic50_predicted_ng_ml": 9.1,
-      "summary_risk": "Potentially Effective",
+      "cocktail_ic50_literature_ng_ml": 181.75,
+      "cocktail_ic50_predicted_ng_ml": 442.9,
+      "summary_risk": "High",
       "ic50_comparison": {
         "Casirivimab": {
           "literature_ng_ml": 357.7,
@@ -275,7 +275,7 @@
           "direction_correct": null
         }
       },
-      "elapsed_sec": 12.9,
+      "elapsed_sec": 9.8,
       "evaluation_split": "pipeline_external",
       "notes": "Different accession from website Beta reference (MZ433432.1)."
     },
@@ -296,9 +296,9 @@
         "K417T",
         "H655Y"
       ],
-      "cocktail_ic50_literature_ng_ml": 10.0,
-      "cocktail_ic50_predicted_ng_ml": 8.2,
-      "summary_risk": "Potentially Effective",
+      "cocktail_ic50_literature_ng_ml": 432.5,
+      "cocktail_ic50_predicted_ng_ml": 198.2,
+      "summary_risk": "High",
       "ic50_comparison": {
         "Casirivimab": {
           "literature_ng_ml": 855.0,
@@ -321,7 +321,7 @@
           "direction_correct": null
         }
       },
-      "elapsed_sec": 13.1,
+      "elapsed_sec": 9.7,
       "evaluation_split": "pipeline_external",
       "notes": "Different accession from website Gamma reference (OR701610.1)."
     },
@@ -342,9 +342,9 @@
         "P681R",
         "T19R"
       ],
-      "cocktail_ic50_literature_ng_ml": 5.55,
-      "cocktail_ic50_predicted_ng_ml": 21.8,
-      "summary_risk": "Potentially Effective",
+      "cocktail_ic50_literature_ng_ml": 5.775,
+      "cocktail_ic50_predicted_ng_ml": 46.9,
+      "summary_risk": "Moderate",
       "ic50_comparison": {
         "Casirivimab": {
           "literature_ng_ml": 5.55,
@@ -367,7 +367,7 @@
           "direction_correct": null
         }
       },
-      "elapsed_sec": 13.0,
+      "elapsed_sec": 9.7,
       "evaluation_split": "pipeline_external",
       "notes": "Different accession from website Delta reference (OK091006.1)."
     }

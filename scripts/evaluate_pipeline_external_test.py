@@ -160,7 +160,7 @@ def main():
         lit_imd = case["literature_ic50_ng_ml"]["Imdevimab"]["value"]
         pred_casi = ic50_comparison["Casirivimab"].get("predicted_ng_ml")
         pred_imd = ic50_comparison["Imdevimab"].get("predicted_ng_ml")
-        lit_cocktail = min(lit_casi, lit_imd)
+        lit_cocktail = (lit_casi + lit_imd) / 2.0
         pred_cocktail = prediction.get("cocktail_prediction", 0) * 1000
 
         row = {

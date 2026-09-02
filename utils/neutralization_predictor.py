@@ -159,7 +159,7 @@ class NeutralizationPredictor:
                 "recognized_mutations": known_mutations,
             }
 
-        cocktail_prediction = round(min(predicted_ic50s), 4) if predicted_ic50s else 0.0
+        cocktail_prediction = round(float(np.mean(predicted_ic50s)), 4) if predicted_ic50s else 0.0
 
         if cocktail_prediction >= 0.1:
             summary_risk = "High"
