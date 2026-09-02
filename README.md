@@ -105,4 +105,7 @@ pandas, scikit-learn, joblib, numpy.
 
 ## License
 
-MIT. See `LICENSE`. Training data sources are documented in `DATA_SOURCES.md`.
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+See `LICENSE`. This matches the AIMS/BDIA journal open-access terms for the associated manuscript.
+The web tool is for **research and teaching only**, not clinical use. Training data sources are
+documented in `DATA_SOURCES.md`.

@@ -9,7 +9,7 @@ authors:
   - family-names: He
     given-names: Daihai
 repository-code: https://github.com/coohzou/sars-cov-2-antibody-escape-predictor
-license: MIT
+license: CC-BY-4.0
 keywords:
   - SARS-CoV-2
   - monoclonal antibody
